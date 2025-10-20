@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Geisy Silveira - Maquiagem, Manicure e Pedicure</title>
-  <meta name="description" content="Geisy Silveira - Salão de beleza especializado em maquiagem profissional, manicure e pedicure. Atendimentos com hora marcada." />
+  <title>Geisy Silveira</title>
+  <meta name="description" content="Espaço Geisy Silveira." />
   <style>
     :root{
       --accent:#b13b7a;
@@ -27,18 +27,15 @@
     .cta{display:inline-block;padding:12px 18px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:700}
     .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(177,59,122,0.08)}
 
-    /* Services */
     .services{max-width:1200px;margin:8px auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
     .service{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff, #fff7fb);border:1px solid #f5e8ef}
     .service h3{margin:0 0 8px}
     .service p{margin:0;color:var(--muted)}
 
-    /* Gallery */
     .gallery{max-width:1200px;margin:18px auto;padding:0 20px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
     .grid img{width:100%;height:160px;object-fit:cover;border-radius:10px}
 
-    /* Contact */
     .contact-section{max-width:1200px;margin:24px auto;padding:0 20px;display:grid;grid-template-columns:1fr 380px;gap:20px}
     form label{display:block;margin-bottom:6px;font-weight:600}
     input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e7d5df;margin-bottom:12px}
@@ -109,6 +106,10 @@
             <option value="pedicure">Pedicure</option>
             <option value="noiva">Maquiagem de Noiva</option>
           </select>
+          <label for="data">Data desejada</label>
+          <input type="date" id="data" name="data" required />
+          <label for="hora">Horário desejado</label>
+          <input type="time" id="hora" name="hora" required />
           <button type="submit">Enviar</button>
         </form>
       </aside>
@@ -139,7 +140,6 @@
     <section id="galeria" class="gallery">
       <h2 style="margin:0 0 12px 20px">Galeria</h2>
       <div class="grid">
-        <!-- Substitua os src abaixo por imagens reais -->
         <img src="https://placehold.co/600x400?text=Maquiagem+1" alt="Maquiagem 1" />
         <img src="https://placehold.co/600x400?text=Maquiagem+2" alt="Maquiagem 2" />
         <img src="https://placehold.co/600x400?text=Manicure" alt="Manicure" />
@@ -150,14 +150,14 @@
     <section id="contato" class="contact-section">
       <div class="card">
         <h2 style="margin-top:0">Mais informações & contatos</h2>
-        <p style="color:var(--muted)">Telefone / WhatsApp: <strong>(00) 0 0000-0000</strong></p>
-        <p style="color:var(--muted)">Endereço: Rua Exemplo, 123 - Bairro, Cidade</p>
+        <p style="color:var(--muted)">Telefone / WhatsApp: <strong>(31) 98796-1806</strong></p>
+        <p style="color:var(--muted)">Endereço: Rua Coronel Durval de Barros, 37, Interfone: 7 - Bairro Lindeia, Belo Horizonte</p>
 
         <h3 style="margin-bottom:6px">Horários</h3>
-        <p style="margin:0;color:var(--muted)">Seg–Sex: 09:00–19:00 • Sáb: 09:00–14:00 • Dom: Fechado</p>
+        <p style="margin:0;color:var(--muted)">Seg–Sex: 09:00–18:00 • Sáb: 09:00–19:00 • Dom: Fechado</p>
 
         <h3 style="margin-top:14px">Redes sociais</h3>
-        <p style="margin:6px 0 0"><a href="#" style="text-decoration:none;color:var(--accent);font-weight:700">Instagram</a> • <a href="#" style="text-decoration:none;color:var(--accent);font-weight:700">WhatsApp</a></p>
+        <p style="margin:6px 0 0"><a href="#" style="text-decoration:none;color:var(--accent);font-weight:700">Instagram</a> • <a href="https://wa.me/5531987961806" style="text-decoration:none;color:var(--accent);font-weight:700">WhatsApp</a></p>
       </div>
 
       <div class="card">
@@ -180,6 +180,9 @@
           <label for="date">Data preferencial</label>
           <input id="date" name="date" type="date" />
 
+          <label for="time">Horário preferencial</label>
+          <input id="time" name="time" type="time" />
+
           <label for="notes">Observações</label>
           <textarea id="notes" name="notes" rows="4" placeholder="Ex: horário da tarde, alergias, etc."></textarea>
 
@@ -187,7 +190,6 @@
         </form>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -195,15 +197,20 @@
   </footer>
 
   <script>
-    // Atualiza ano do rodapé
     document.getElementById('ano').textContent = new Date().getFullYear();
 
-    // Submissão dos formulários (exemplo: envia para backend via fetch)
     function handleSubmit(e){
       e.preventDefault();
       const data = Object.fromEntries(new FormData(e.target).entries());
-      // Aqui você pode enviar os dados com fetch para seu backend / Google Forms / API
-      alert('Pedido enviado — exemplo: ' + (data.fullname || data.nome || '—'));
+      const msg = `Olá! Gostaria de agendar um atendimento.\n\n` +
+        `👩 Nome: ${data.fullname || data.nome}\n` +
+        `📞 Telefone: ${data.phone || data.telefone}\n` +
+        `💅 Serviço: ${data.service || data.servico}\n` +
+        `📅 Data: ${data.date || data.data}\n` +
+        `⏰ Horário: ${data.time || data.hora}\n` +
+        (data.notes ? `📝 Observações: ${data.notes}` : '');
+      const url = `https://wa.me/5531987961806?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
       e.target.reset();
     }
     document.getElementById('contactForm').addEventListener('submit', handleSubmit);
