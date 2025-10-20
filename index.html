@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Geisy Silveira</title>
-  <meta name="description" content="Espaço Geisy Silveira." />
+  <meta name="description" content="Espaço Geisy Silveira - Maquiagem, Manicure e Pedicure." />
   <style>
     :root{
       --accent:#b13b7a;
@@ -16,36 +16,57 @@
       font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#222}
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:rgba(255,255,255,0.9);backdrop-filter: blur(6px);position:sticky;top:0;z-index:10;border-bottom:1px solid #f0e5ee}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
-    nav a{margin-left:16px;text-decoration:none;color:#333;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;max-width:1200px;margin:28px auto;padding:0 20px}
-    .hero-text h1{font-size:32px;margin:0 0 8px}
-    .hero-text p{color:var(--muted);margin:0 0 16px}
-    .cta{display:inline-block;padding:12px 18px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:700}
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(177,59,122,0.08)}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#222;scroll-behavior:smooth;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(255,255,255,0.95);backdrop-filter: blur(6px);position:sticky;top:0;z-index:10;border-bottom:1px solid #f0e5ee}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav a{margin-left:12px;text-decoration:none;color:#333;font-weight:600;font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;max-width:1000px;margin:20px auto;padding:0 16px}
+    .hero-text h1{font-size:26px;margin:0 0 8px;line-height:1.3}
+    .hero-text p{color:var(--muted);margin:0 0 16px;font-size:15px}
+    .cta{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px}
+    .card{background:var(--card);padding:16px;border-radius:14px;box-shadow:0 4px 12px rgba(177,59,122,0.08)}
 
-    .services{max-width:1200px;margin:8px auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-    .service{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff, #fff7fb);border:1px solid #f5e8ef}
-    .service h3{margin:0 0 8px}
-    .service p{margin:0;color:var(--muted)}
+    .services{max-width:1000px;margin:12px auto;padding:0 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .service{padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff, #fff7fb);border:1px solid #f5e8ef}
+    .service h3{margin:0 0 6px;font-size:16px}
+    .service p{margin:0;color:var(--muted);font-size:14px}
 
-    .gallery{max-width:1200px;margin:18px auto;padding:0 20px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-    .grid img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    .gallery{max-width:1000px;margin:12px auto;padding:0 16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+    .grid img{width:100%;height:140px;object-fit:cover;border-radius:10px}
 
-    .contact-section{max-width:1200px;margin:24px auto;padding:0 20px;display:grid;grid-template-columns:1fr 380px;gap:20px}
-    form label{display:block;margin-bottom:6px;font-weight:600}
-    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e7d5df;margin-bottom:12px}
-    button{background:var(--accent);color:#fff;padding:12px 14px;border-radius:10px;border:0;font-weight:700}
+    .contact-section{max-width:1000px;margin:16px auto;padding:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    form label{display:block;margin-bottom:6px;font-weight:600;font-size:14px}
+    input,textarea,select{width:100%;padding:12px;border-radius:8px;border:1px solid #e7d5df;margin-bottom:12px;font-size:14px}
+    button{background:var(--accent);color:#fff;padding:12px 14px;border-radius:10px;border:0;font-weight:700;font-size:14px;cursor:pointer}
+    footer{margin-top:24px;padding:16px;text-align:center;color:var(--muted);font-size:13px}
 
-    footer{margin-top:36px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
+    /* Botão flutuante WhatsApp */
+    #whatsappBtn{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:white;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:28px;
+      text-decoration:none;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+      z-index:999;
+    }
 
     @media (max-width:880px){
-      .hero{grid-template-columns:1fr}
-      .contact-section{grid-template-columns:1fr}
+      .hero{grid-template-columns:1fr;gap:16px}
+      .contact-section{grid-template-columns:1fr;gap:16px}
+      .hero-text h1{font-size:22px}
+      .hero-text p{font-size:14px}
+      nav a{margin-left:8px;font-size:13px}
     }
   </style>
 </head>
@@ -54,8 +75,8 @@
     <div class="brand">
       <div class="logo">GS</div>
       <div>
-        <div style="font-weight:800">Geisy Silveira</div>
-        <div style="font-size:13px;color:var(--muted)">Maquiagem • Manicure • Pedicure</div>
+        <div style="font-weight:800;font-size:16px">Geisy Silveira</div>
+        <div style="font-size:12px;color:var(--muted)">Maquiagem • Manicure • Pedicure</div>
       </div>
     </div>
     <nav>
@@ -72,28 +93,28 @@
         <p>Atendimento personalizado para noivas, festas, editoriais e makes do dia a dia. Também oferecemos serviços completos de manicure e pedicure com técnicas seguras e acabamento premium.</p>
         <a class="cta" href="#contato">Agendar Atendimento</a>
 
-        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
-          <div class="card" style="display:flex;gap:12px;align-items:center">
-            <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700">⭐</div>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <div class="card" style="display:flex;gap:8px;align-items:center;flex:1;min-width:140px">
+            <div style="width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700">⭐</div>
             <div>
-              <div style="font-weight:700">Profissional experiente</div>
-              <div style="color:var(--muted);font-size:13px">Atendimento com produtos de qualidade</div>
+              <div style="font-weight:700;font-size:14px">Profissional experiente</div>
+              <div style="color:var(--muted);font-size:12px">Atendimento com produtos de qualidade</div>
             </div>
           </div>
 
-          <div class="card" style="display:flex;gap:12px;align-items:center">
-            <div style="width:56px;height:56px;border-radius:10px;background:#fff3f8;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700">💄</div>
+          <div class="card" style="display:flex;gap:8px;align-items:center;flex:1;min-width:140px">
+            <div style="width:46px;height:46px;border-radius:10px;background:#fff3f8;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700">💄</div>
             <div>
-              <div style="font-weight:700">Maquiagem sob medida</div>
-              <div style="color:var(--muted);font-size:13px">Desde o natural até o glam</div>
+              <div style="font-weight:700;font-size:14px">Maquiagem sob medida</div>
+              <div style="color:var(--muted);font-size:12px">Desde o natural até o glam</div>
             </div>
           </div>
         </div>
       </div>
 
       <aside class="card">
-        <h3 style="margin-top:0">Agende sua sessão</h3>
-        <p style="color:var(--muted);margin:0 0 12px">Preencha o formulário e entraremos em contato para confirmar a data e o horário.</p>
+        <h3 style="margin-top:0;font-size:16px">Agende sua sessão</h3>
+        <p style="color:var(--muted);margin:0 0 12px;font-size:13px">Preencha o formulário e entraremos em contato para confirmar a data e o horário.</p>
         <form id="miniForm">
           <label for="nome">Nome</label>
           <input id="nome" name="nome" required />
@@ -138,7 +159,7 @@
     </section>
 
     <section id="galeria" class="gallery">
-      <h2 style="margin:0 0 12px 20px">Galeria</h2>
+      <h2 style="margin:0 0 12px 16px;font-size:18px">Galeria</h2>
       <div class="grid">
         <img src="https://placehold.co/600x400?text=Maquiagem+1" alt="Maquiagem 1" />
         <img src="https://placehold.co/600x400?text=Maquiagem+2" alt="Maquiagem 2" />
@@ -149,19 +170,19 @@
 
     <section id="contato" class="contact-section">
       <div class="card">
-        <h2 style="margin-top:0">Mais informações & contatos</h2>
-        <p style="color:var(--muted)">Telefone / WhatsApp: <strong>(31) 98796-1806</strong></p>
-        <p style="color:var(--muted)">Endereço: Rua Coronel Durval de Barros, 37, Interfone: 7 - Bairro Lindeia, Belo Horizonte</p>
+        <h2 style="margin-top:0;font-size:16px">Mais informações & contatos</h2>
+        <p style="color:var(--muted);font-size:13px">Telefone / WhatsApp: <strong>(31) 98796-1806</strong></p>
+        <p style="color:var(--muted);font-size:13px">Endereço: Rua Coronel Durval de Barros, 37, Interfone: 7 - Bairro Lindeia, Belo Horizonte</p>
 
-        <h3 style="margin-bottom:6px">Horários</h3>
-        <p style="margin:0;color:var(--muted)">Seg–Sex: 09:00–18:00 • Sáb: 09:00–19:00 • Dom: Fechado</p>
+        <h3 style="margin-bottom:6px;font-size:14px">Horários</h3>
+        <p style="margin:0;color:var(--muted);font-size:13px">Seg–Sex: 09:00–18:00 • Sáb: 09:00–19:00 • Dom: Fechado</p>
 
-        <h3 style="margin-top:14px">Redes sociais</h3>
-        <p style="margin:6px 0 0"><a href="#" style="text-decoration:none;color:var(--accent);font-weight:700">Instagram</a> • <a href="https://wa.me/5531987961806" style="text-decoration:none;color:var(--accent);font-weight:700">WhatsApp</a></p>
+        <h3 style="margin-top:14px;font-size:14px">Redes sociais</h3>
+        <p style="margin:6px 0 0;font-size:13px"><a href="#" style="text-decoration:none;color:var(--accent);font-weight:700">Instagram</a> • <a href="https://wa.me/5531987961806" style="text-decoration:none;color:var(--accent);font-weight:700">WhatsApp</a></p>
       </div>
 
       <div class="card">
-        <h3 style="margin-top:0">Formulário de agendamento</h3>
+        <h3 style="margin-top:0;font-size:16px">Formulário de agendamento</h3>
         <form id="contactForm">
           <label for="fullname">Nome completo</label>
           <input id="fullname" name="fullname" required />
@@ -196,6 +217,9 @@
     <div>© <span id="ano"></span> Geisy Silveira • Todos os direitos reservados</div>
   </footer>
 
+  <!-- Botão flutuante WhatsApp -->
+  <a id="whatsappBtn" href="https://wa.me/5531987961806?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento." target="_blank">💬</a>
+
   <script>
     document.getElementById('ano').textContent = new Date().getFullYear();
 
@@ -213,6 +237,7 @@
       window.open(url, '_blank');
       e.target.reset();
     }
+
     document.getElementById('contactForm').addEventListener('submit', handleSubmit);
     document.getElementById('miniForm').addEventListener('submit', handleSubmit);
   </script>
