@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Geisy Silveira - Maquiagem, Manicure e Pedicure</title>
+  <meta name="description" content="Geisy Silveira - Salão de beleza especializado em maquiagem profissional, manicure e pedicure. Atendimentos com hora marcada." />
+  <style>
+    :root{
+      --accent:#b13b7a;
+      --accent-2:#f06fa3;
+      --bg:#fff8fb;
+      --muted:#666;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.65);
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#222}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:rgba(255,255,255,0.9);backdrop-filter: blur(6px);position:sticky;top:0;z-index:10;border-bottom:1px solid #f0e5ee}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav a{margin-left:16px;text-decoration:none;color:#333;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;max-width:1200px;margin:28px auto;padding:0 20px}
+    .hero-text h1{font-size:32px;margin:0 0 8px}
+    .hero-text p{color:var(--muted);margin:0 0 16px}
+    .cta{display:inline-block;padding:12px 18px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:700}
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(177,59,122,0.08)}
+
+    /* Services */
+    .services{max-width:1200px;margin:8px auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .service{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff, #fff7fb);border:1px solid #f5e8ef}
+    .service h3{margin:0 0 8px}
+    .service p{margin:0;color:var(--muted)}
+
+    /* Gallery */
+    .gallery{max-width:1200px;margin:18px auto;padding:0 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+    .grid img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+
+    /* Contact */
+    .contact-section{max-width:1200px;margin:24px auto;padding:0 20px;display:grid;grid-template-columns:1fr 380px;gap:20px}
+    form label{display:block;margin-bottom:6px;font-weight:600}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e7d5df;margin-bottom:12px}
+    button{background:var(--accent);color:#fff;padding:12px 14px;border-radius:10px;border:0;font-weight:700}
+
+    footer{margin-top:36px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .contact-section{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">GS</div>
+      <div>
+        <div style="font-weight:800">Geisy Silveira</div>
+        <div style="font-size:13px;color:var(--muted)">Maquiagem • Manicure • Pedicure</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Agende</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Transformando sua beleza com maquiagem profissional</h1>
+        <p>Atendimento personalizado para noivas, festas, editoriais e makes do dia a dia. Também oferecemos serviços completos de manicure e pedicure com técnicas seguras e acabamento premium.</p>
+        <a class="cta" href="#contato">Agendar Atendimento</a>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <div class="card" style="display:flex;gap:12px;align-items:center">
+            <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700">⭐</div>
+            <div>
+              <div style="font-weight:700">Profissional experiente</div>
+              <div style="color:var(--muted);font-size:13px">Atendimento com produtos de qualidade</div>
+            </div>
+          </div>
+
+          <div class="card" style="display:flex;gap:12px;align-items:center">
+            <div style="width:56px;height:56px;border-radius:10px;background:#fff3f8;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700">💄</div>
+            <div>
+              <div style="font-weight:700">Maquiagem sob medida</div>
+              <div style="color:var(--muted);font-size:13px">Desde o natural até o glam</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0">Agende sua sessão</h3>
+        <p style="color:var(--muted);margin:0 0 12px">Preencha o formulário e entraremos em contato para confirmar a data e o horário.</p>
+        <form id="miniForm">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" required />
+          <label for="telefone">Telefone / WhatsApp</label>
+          <input id="telefone" name="telefone" required />
+          <label for="servico">Serviço</label>
+          <select id="servico" name="servico">
+            <option value="maquiagem">Maquiagem</option>
+            <option value="manicure">Manicure</option>
+            <option value="pedicure">Pedicure</option>
+            <option value="noiva">Maquiagem de Noiva</option>
+          </select>
+          <button type="submit">Enviar</button>
+        </form>
+      </aside>
+    </section>
+
+    <section id="servicos" class="services" aria-label="Serviços">
+      <article class="service">
+        <h3>Maquiagem Profissional</h3>
+        <p>Consultoria de maquiagem para eventos, produções fotográficas e noivas. Teste de maquiagem e indicação de produtos.</p>
+      </article>
+
+      <article class="service">
+        <h3>Maquiagem de Noiva</h3>
+        <p>Pacotes especiais para noivas com prova, deslocamento (quando aplicável) e preparação da pele.</p>
+      </article>
+
+      <article class="service">
+        <h3>Manicure</h3>
+        <p>Manicure tradicional, alongamento, esmaltação em gel e decoração sob medida.</p>
+      </article>
+
+      <article class="service">
+        <h3>Pedicure</h3>
+        <p>Pedicure estética com higiene profissional, spa dos pés e finalização com esmaltação.</p>
+      </article>
+    </section>
+
+    <section id="galeria" class="gallery">
+      <h2 style="margin:0 0 12px 20px">Galeria</h2>
+      <div class="grid">
+        <!-- Substitua os src abaixo por imagens reais -->
+        <img src="https://placehold.co/600x400?text=Maquiagem+1" alt="Maquiagem 1" />
+        <img src="https://placehold.co/600x400?text=Maquiagem+2" alt="Maquiagem 2" />
+        <img src="https://placehold.co/600x400?text=Manicure" alt="Manicure" />
+        <img src="https://placehold.co/600x400?text=Pedicure" alt="Pedicure" />
+      </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+      <div class="card">
+        <h2 style="margin-top:0">Mais informações & contatos</h2>
+        <p style="color:var(--muted)">Telefone / WhatsApp: <strong>(00) 0 0000-0000</strong></p>
+        <p style="color:var(--muted)">Endereço: Rua Exemplo, 123 - Bairro, Cidade</p>
+
+        <h3 style="margin-bottom:6px">Horários</h3>
+        <p style="margin:0;color:var(--muted)">Seg–Sex: 09:00–19:00 • Sáb: 09:00–14:00 • Dom: Fechado</p>
+
+        <h3 style="margin-top:14px">Redes sociais</h3>
+        <p style="margin:6px 0 0"><a href="#" style="text-decoration:none;color:var(--accent);font-weight:700">Instagram</a> • <a href="#" style="text-decoration:none;color:var(--accent);font-weight:700">WhatsApp</a></p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0">Formulário de agendamento</h3>
+        <form id="contactForm">
+          <label for="fullname">Nome completo</label>
+          <input id="fullname" name="fullname" required />
+
+          <label for="phone">Telefone / WhatsApp</label>
+          <input id="phone" name="phone" required />
+
+          <label for="service">Serviço desejado</label>
+          <select id="service" name="service">
+            <option>Maquiagem</option>
+            <option>Maquiagem de Noiva</option>
+            <option>Manicure</option>
+            <option>Pedicure</option>
+          </select>
+
+          <label for="date">Data preferencial</label>
+          <input id="date" name="date" type="date" />
+
+          <label for="notes">Observações</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Ex: horário da tarde, alergias, etc."></textarea>
+
+          <button type="submit">Enviar pedido</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>© <span id="ano"></span> Geisy Silveira • Todos os direitos reservados</div>
+  </footer>
+
+  <script>
+    // Atualiza ano do rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // Submissão dos formulários (exemplo: envia para backend via fetch)
+    function handleSubmit(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      // Aqui você pode enviar os dados com fetch para seu backend / Google Forms / API
+      alert('Pedido enviado — exemplo: ' + (data.fullname || data.nome || '—'));
+      e.target.reset();
+    }
+    document.getElementById('contactForm').addEventListener('submit', handleSubmit);
+    document.getElementById('miniForm').addEventListener('submit', handleSubmit);
+  </script>
+</body>
+</html>
